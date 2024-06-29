@@ -65,35 +65,49 @@
                 </div>
             </div>
         </section>
+
+
     </main>
 
     <footer>
-        <p>&copy; @DateTime.Now.Year Barbershop. Todos los derechos reservados.</p>
-        <section id="contacto">
-            <div class="contact-form-container">
-                <form asp-action="Create" method="post">
-                    <h2>Contacto</h2>
-                    <div class="form-group">
-                        <label asp-for="Nombre" class="control-label"></label>
-                        <input asp-for="Nombre" class="form-control" />
-                        <span asp-validation-for="Nombre" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Correo" class="control-label"></label>
-                        <input asp-for="Correo" class="form-control" />
-                        <span asp-validation-for="Correo" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Mensaje" class="control-label"></label>
-                        <textarea asp-for="Mensaje" class="form-control"></textarea>
-                        <span asp-validation-for="Mensaje" class="text-danger"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+       @*  <p>&copy; @DateTime.Now.Year Barbershop. Todos los derechos reservados.</p> *@
+        <div class="footer-container"> 
             </div>
-        </section>
-    </footer>
+        <section id="contacto">
+           <div class="contact-form-container">
+        <form asp-action="Create" method="post">
+            <h2>Contacto</h2>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Correo" class="control-label"></label>
+                <input asp-for="Correo" class="form-control" />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mensaje" class="control-label"></label>
+                <textarea asp-for="Mensaje" class="form-control"></textarea>
+                <span asp-validation-for="Mensaje" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div> 
 
+        </section>
+         
+    </footer>
+    <div class="custom-footer">
+        <p>&copy; 2024 Tu Compañía. Todos los derechos reservados.</p>
+        <div class="footer-links">
+        </div>
+    </div>
+
+    
+
+    
     @section Scripts {
         @{
             await Html.RenderPartialAsync("_ValidationScriptsPartial");
