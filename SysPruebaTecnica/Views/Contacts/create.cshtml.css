@@ -1,0 +1,148 @@
+﻿/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+header {
+    background-color: #1E4E79;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #1E4E79;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    position: relative;
+}
+
+    /* Estilos del formulario para contacto dentro del footer */
+    footer .contact-form-container {
+        max-width: 300px;
+        width: 100%;
+        background-color: #1E4E79;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        color: white;
+        position: relative;
+        margin-left: auto;
+        margin-right: 45px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer .contact-form-container form {
+      display: flex;
+      flex-direction: column;
+     }
+
+    footer .contact-form-container .form-group {
+       margin-bottom: 10px;
+    }
+
+            footer .contact-form-container .form-group label {
+                margin-bottom: 5px;
+                display: block;
+                color: white;
+            }
+
+            footer .contact-form-container .form-group input,
+            footer .contact-form-container .form-group textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+
+            footer .contact-form-container .form-group textarea {
+                resize: vertical;
+            }
+
+        footer .contact-form-container button[type="submit"] {
+            padding: 10px;
+            background-color: #DA291C;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            footer .contact-form-container button[type="submit"]:hover {
+                background-color: #b22222;
+            }
+
+/* Estilos para las imágenes de servicios */
+.services-container .service img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 75% auto;
+    border-radius: 100px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los carruseles */
+.carousel {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    max-height: 200px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+    .carousel-item img {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+/* Estilos para el texto dentro de los carruseles */
+.carousel-caption {
+    color: white;
+}
+
+.carousel-item h3, .carousel-item p {
+    color: white;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 10px;
+    }
+
+        footer .contact-form-container {
+            width: 90%;
+            margin: 0 auto;
+        }
+}

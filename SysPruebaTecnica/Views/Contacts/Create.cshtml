@@ -1,0 +1,106 @@
+﻿@model SysPruebaTecnica.Models.Contacto
+
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+
+    <main>
+
+        <section id="servicios">
+            <div class="services-container">
+                <h2>Servicios de Barbería</h2>
+                <div class="service">
+                    <h3>Cortes de Pelo</h3>
+                    <div id="carouselCortesPelo" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="~/Imagen/taperfade.jpg" class="d-block w-100" alt="Corte de Pelo">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Ofrecemos una variedad de cortes de pelo modernos y clásicos, adaptados a tus preferencias y estilo personal.</p>
+                </div>
+                <div class="service">
+                    <h3>Tintado de Pelo</h3>
+                    <div id="carouselTintadoPelo" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="~/Imagen/tinte.jpg" class="d-block w-100" alt="Tintado de Pelo">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Transforma tu look con nuestros servicios de tintado de pelo, utilizando productos de alta calidad para resultados duraderos y naturales.</p>
+                </div>
+                <div class="service">
+                    <h3>Corte de Barba</h3>
+                    <div id="carouselCorteBarba" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="~/Imagen/cortebarbas.jpeg" class="d-block w-100" alt="Corte de Barba">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Nuestros barberos expertos te ofrecen cortes de barba precisos y personalizados, utilizando técnicas tradicionales para mantener tu estilo impecable.</p>
+                </div>
+                <div class="service">
+                    <h3>Exfoliación Facial</h3>
+                    <div id="carouselExfoliacionFacial" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="~/Imagen/facial.jpg" class="d-block w-100" alt="Exfoliación Facial">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Relájate y revitaliza tu piel con nuestros tratamientos de exfoliación facial, diseñados para eliminar impurezas y rejuvenecer tu rostro.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year Barbershop. Todos los derechos reservados.</p>
+        <section id="contacto">
+            <div class="contact-form-container">
+                <form asp-action="Create" method="post">
+                    <h2>Contacto</h2>
+                    <div class="form-group">
+                        <label asp-for="Nombre" class="control-label"></label>
+                        <input asp-for="Nombre" class="form-control" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Correo" class="control-label"></label>
+                        <input asp-for="Correo" class="form-control" />
+                        <span asp-validation-for="Correo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Mensaje" class="control-label"></label>
+                        <textarea asp-for="Mensaje" class="form-control"></textarea>
+                        <span asp-validation-for="Mensaje" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </footer>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+
+</body>
+</html>
